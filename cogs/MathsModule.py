@@ -12,7 +12,10 @@ class MathsModule(commands.Cog):
     @commands.command()
     async def calc(self, ctx, *, expression=None):
         if not expression:
-            await ctx.send("Je ne peux pas calculer du vide ...")
+            await ctx.send(":warning: Je ne peux pas calculer du vide ...")
+            return
+        if expression.find("import ") != -1:
+            await ctx.send(":x: N'essayez surtout pas d'importer une librairie ...")
             return
         try:
             await ctx.send(f"```\n{expression} = {eval(expression)}```")
