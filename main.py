@@ -53,13 +53,13 @@ async def _reload(ctx, cog=None):
     for cog in listdir(path.join(getcwd(), "cogs")):
         if cog.endswith('Module.py'):
             if failed:
-                message += "\n:x: "+cog.replace('py', '')
+                message += "\n:x: "+cog.replace('.py', '')
                 continue
             try:
-                bot.reload_extension(f"cogs.{cog.replace('py', '')}")
-                message += "\n:white_check_mark: " + cog.replace('py', '')
+                bot.reload_extension(f"cogs.{cog.replace('.py', '')}")
+                message += "\n:white_check_mark: " + cog.replace('.py', '')
             except Exception as e:
-                message += "\n:warning: " + cog.replace('py', '')
+                message += "\n:warning: " + cog.replace('.py', '')
                 error = e
                 failed = True
     await ctx.send(message)
@@ -71,10 +71,10 @@ async def _reload(ctx, cog=None):
 for cog in listdir(path.join(getcwd(), "cogs")):
     if cog.endswith('Module.py'):
         try:
-            bot.load_extension(f"cogs.{cog.replace('py', '')}")
-            print(f"{cog.replace('py', '')} loaded successfully")
+            bot.load_extension(f"cogs.{cog.replace('.py', '')}")
+            print(f"{cog.replace('.py', '')} loaded successfully")
         except Exception as e:
-            print(f"{cog.replace('py', '')} failed to load")
+            print(f"{cog.replace('.py', '')} failed to load")
             raise e
 
 
