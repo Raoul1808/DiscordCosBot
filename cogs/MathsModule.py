@@ -21,6 +21,9 @@ class MathsModule(commands.Cog):
         if expression.find("input(") != -1:
             await ctx.send(":x: Je ne peux pas exécuter les méthodes `input()`")
             return
+        if expression.lower().find("lucien") != -1:
+            await ctx.send(":warning: Valeur de Lucien trop faible. Calcul impossible.")
+            return
         try:
             await ctx.send(f"```\n{expression} = {eval(expression)}```")
         except ZeroDivisionError:
