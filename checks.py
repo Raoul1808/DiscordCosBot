@@ -3,11 +3,11 @@
 # Si le résultat retourné est False (faux/négatif), la commande ne s'exécutera pas.
 
 
-# Importation des librairies Python + Discord.py
+# Import des librairies Python + Discord.py
 import discord
 from discord.ext import commands
 
-# Importation des fichiers locaux
+# Import des fichiers locaux
 import config
 
 

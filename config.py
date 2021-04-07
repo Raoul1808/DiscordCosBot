@@ -1,4 +1,4 @@
-# Importation de librairies Python
+# Import de librairies Python
 import os
 
 

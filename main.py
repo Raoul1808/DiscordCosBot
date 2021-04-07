@@ -1,10 +1,10 @@
-# Importation des librairies Python + Discord.py
+# Import des librairies Python + Discord.py
 import discord
 from discord.ext import commands
 import random
 from os import listdir, path, getcwd
 
-# Importation de fichiers locaux
+# Import de fichiers locaux
 import config
 import checks
 
